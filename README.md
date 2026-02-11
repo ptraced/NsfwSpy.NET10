@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/NsfwSpy/NsfwSpy.NET/main/_art/NsfwSpy.jpg" alt="NsfwSpy Logo" width="400"/>
 
 # Introduction
-NsfwSpy is a nudity/pornography image and video classifier built for .NET Core 2.0 and later, with support for Windows, [macOS](#macos-support) and Linux, to aid in moderating user-generated content for various different application types, written in C#. The [ML.NET](https://github.com/dotnet/machinelearning) model has been trained against the ResNet V250 neural net architecture with 646,000 images (109GB), from 4 different categories:
+NsfwSpy is a nudity/pornography image and video classifier built for .NET Core 10 and later, with support for Windows, [macOS](#macos-support) and Linux, to aid in moderating user-generated content for various different application types, written in C#. The [ML.NET](https://github.com/dotnet/machinelearning) model has been trained against the ResNet V250 neural net architecture with 646,000 images (109GB), from 4 different categories:
 
 | Label       | Description | Files |
 | ----------- | ----------- | ----- |
@@ -10,7 +10,7 @@ NsfwSpy is a nudity/pornography image and video classifier built for .NET Core 2
 | Hentai      | Drawings or animations of sexual acts and nudity. | 83,000 |
 | Neutral     | Images that are not sexual in nature. | 378,000 |
 
-<img src="https://raw.githubusercontent.com/d00ML0rDz/NsfwSpy/main/_art/Examples.gif" />
+<img src="https://raw.githubusercontent.com/ptraced/NsfwSpy/main/_art/Examples.gif" />
 
 ### Other Projects
 Looking for a **JavaScript** version of NsfwSpy? We have you covered - **[NsfwSpy.js](https://github.com/d00ML0rDz/NsfwSpy.js)** 😎
@@ -24,9 +24,9 @@ NsfwSpy isn't perfect, but the accuracy should be good enough to detect approxim
 | Correctly Predicted Label | 85.7% | 84.4% | 91.9% | 96.54% |
 
 # Quick Start
-Looking to quickly try out NsfwSpy? Check out our steps to use [NsfwSpy.App](https://github.com/d00ML0rDz/NsfwSpy/tree/main/NsfwSpy.App).
+Looking to quickly try out NsfwSpy? Check out our steps to use [NsfwSpy.App](https://github.com/ptraced/NsfwSpy/tree/main/NsfwSpy.App).
 
-This project is available as a [NuGet](https://www.nuget.org/packages/NsfwSpy/) package and can be installed with the following commands:
+This project is available as a [NuGet](https://www.nuget.org/packages/NsfwSpy.NET10/) package and can be installed with the following commands:
 
 **Package Manager**
 ```
@@ -121,16 +121,16 @@ sudo apt install ffmpeg
 To get GPU support working, please follow the prerequisite steps [here](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.vision.imageclassificationtrainer?view=ml-dotnet&fbclid=IwAR3Ng6Pe1BWDZ3hR20tchutSozmdMojxvpy3pqdwA3fZ_OEstU8C-ptSRZw#gpu-support) to install [CUDA v10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2) and [CUDNN v7.6.4 for CUDA 10.1](https://developer.nvidia.com/rdp/cudnn-archive). Later versions do not work (as I tried with CUDA v11.4). The SciSharp.TensorFlow.Redist-Windows-GPU and SciSharp.TensorFlow.Redist-Linux-GPU packages are already included as part of the NsfwSpy package.
 
 # macOS Support
-To get NsfwSpy working on macOS, the [SciSharp.TensorFlow.Redist v2.3.1](https://www.nuget.org/packages/SciSharp.TensorFlow.Redist/2.3.1) NuGet package also needs to be installed. This not included by default as it interfers with supporting GPUs on Windows and Linux. You can do this with either of the following commands:
+To get NsfwSpy working on macOS, the [SciSharp.TensorFlow.Redist v2.3.1](https://www.nuget.org/packages/SciSharp.TensorFlow.Redist) NuGet package also needs to be installed. This not included by default as it interfers with supporting GPUs on Windows and Linux. You can do this with either of the following commands:
 
 **Package Manager**
 ```
-Install-Package SciSharp.TensorFlow.Redist -Version 2.3.1
+Install-Package SciSharp.TensorFlow.Redist
 ```
 
 **.NET CLI**
 ```
-dotnet add package SciSharp.TensorFlow.Redist --version 2.3.1
+dotnet add package SciSharp.TensorFlow.Redist
 ```
 
 Please note that Macs that use M1 chips currently [do not support TensorFlow](https://github.com/dotnet/machinelearning/blob/main/docs/project-docs/platform-limitations.md) with ML.NET and cannot make use of NsfwSpy.
@@ -141,4 +141,4 @@ Interested to get involved in the project? Whether you fancy adding features, pr
 # Notes
 Using NsfwSpy? Let us know! We're keen to hear how the technology is being used and improving the safety of applications.
 
-Got a feature request or found something not quite right? Report it [here](https://github.com/d00ML0rDz/NsfwSpy/issues) on GitHub and we'll try to help as best as possible.
+Got a feature request or found something not quite right? Report it [here](https://github.com/ptraced/NsfwSpy/issues) on GitHub and we'll try to help as best as possible.
