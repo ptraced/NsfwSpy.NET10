@@ -1,14 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+namespace NsfwSpyNS;
 
-namespace NsfwSpyNS
-{
-    public class ClassificationFailedException : Exception
-    {
-        public ClassificationFailedException(string message)
-            : base(message)
-        {
-        }
-    }
-}
+public class ClassificationFailedException(string message) : Exception(message);

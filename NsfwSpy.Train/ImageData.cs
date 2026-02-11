@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace NsfwSpyNS.Train;
 
-namespace NsfwSpyNS.Train
+internal class ImageData
 {
-    class ImageData
-    {
-        public string ImagePath { get; set; }
-        public string Label { get; set; }
-    }
+    public string ImagePath { get; set; } = string.Empty;
+    public string Label { get; set; } = string.Empty;
 }
